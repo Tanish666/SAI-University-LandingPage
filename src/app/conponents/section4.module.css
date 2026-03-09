@@ -1,0 +1,258 @@
+.section4 {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.contentWrapper {
+    display: flex;
+    gap: 20px;
+    min-height: 500px;
+}
+
+.schoolsList {
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.schoolTab {
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.activeTab {
+    background-color: #004ea2;
+    color: #fff;
+}
+
+.schoolDetails {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 40px;
+    position: relative;
+}
+
+.detailsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.schoolInfo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.schoolLogo {
+    width: 100px;
+    height: auto;
+}
+
+.schoolName {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+}
+
+.programsBadge {
+    background-color: #004ea2;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.programsList {
+    display: flex;
+    flex-direction: column;
+}
+
+.programItem {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.programItem:last-child {
+    border-bottom: none;
+}
+
+.programTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.programName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.programInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.duration {
+    font-size: 16px;
+    color: #004ea2;
+    font-weight: 500;
+}
+
+.applyLink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.applyLink:hover {
+    transform: translateX(5px);
+}
+
+.arrowIcon {
+    font-size: 18px;
+}
+
+@media (max-width: 992px) {
+    .contentWrapper {
+        flex-direction: column;
+    }
+
+    .schoolsList {
+        flex: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .schoolTab {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+
+    .schoolDetails {
+        padding: 30px;
+    }
+
+    .detailsHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .schoolName {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section4 {
+        padding: 50px 0;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .header h2 {
+        font-size: 28px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .header {
+        margin-bottom: 30px;
+    }
+
+    .schoolsList {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .schoolTab {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+
+    .schoolDetails {
+        padding: 20px 15px;
+    }
+
+    .schoolLogo {
+        width: 50px;
+    }
+
+    .schoolName {
+        font-size: 18px;
+    }
+
+    .schoolInfo {
+        gap: 12px;
+    }
+
+    .programsBadge {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .programName {
+        font-size: 15px;
+    }
+
+    .programInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .duration {
+        font-size: 13px;
+    }
+
+    .applyLink {
+        font-size: 13px;
+    }
+}

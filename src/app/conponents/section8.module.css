@@ -1,0 +1,277 @@
+.section8 {
+    padding: 80px 0;
+    background-color: #ffffff;
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #4b5563;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.videoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.videoCard {
+    background-color: #e5e7eb;
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ytIcon {
+    width: 60px;
+    height: 42px;
+    color: #ff0000;
+}
+
+/* Banner Styles */
+.banner {
+    background: linear-gradient(135deg, #004ea2 0%, #000c1e 100%);
+    padding: 60px 80px;
+    position: relative;
+    /* Removed overflow: hidden to allow student image to pop out */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 380px;
+    margin-top: 100px;
+    /* Increased margin to account for overflowing image */
+}
+
+.bannerContent {
+    flex: 1;
+    z-index: 2;
+}
+
+.bannerTitle {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.bannerSubtitle {
+    font-size: 18px;
+    max-width: 500px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.ctaButton {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+    background-color: #f3f4f6;
+}
+
+.bannerImageWrapper {
+    position: relative;
+    width: 45%;
+    align-self: stretch;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.bannerImage {
+    height: 520px;
+    position: absolute;
+    bottom: -60px;
+    right: -20px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.graphicOverlay {
+    position: absolute;
+    right: 25%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 380px;
+    height: 380px;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+    .bannerTitle {
+        font-size: 36px;
+    }
+
+    .bannerImageWrapper {
+        width: 40%;
+    }
+
+    .graphicOverlay {
+        width: 280px;
+        height: 280px;
+    }
+
+    .bannerImage {
+        height: 420px;
+    }
+}
+
+@media (max-width: 992px) {
+    .videoGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .banner {
+        padding: 40px;
+        min-height: 300px;
+    }
+
+    .bannerTitle {
+        font-size: 30px;
+    }
+
+    .bannerSubtitle {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section8 {
+        padding: 50px 0;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .header {
+        margin-bottom: 30px;
+    }
+
+    .videoGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 50px;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding: 30px 24px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .bannerTitle {
+        font-size: 24px;
+    }
+
+    .bannerSubtitle {
+        margin: 0 auto 20px;
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .bannerImageWrapper {
+        display: none;
+    }
+
+    .ctaButton {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section8 {
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .videoGrid {
+        margin-bottom: 40px;
+        gap: 12px;
+    }
+
+    .ytIcon {
+        width: 40px;
+        height: 28px;
+    }
+
+    .banner {
+        padding: 24px 16px;
+        margin-top: 40px;
+        min-height: auto;
+    }
+
+    .bannerTitle {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .bannerSubtitle {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+
+    .ctaButton {
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+}

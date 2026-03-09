@@ -1,0 +1,203 @@
+.section7 {
+    background-color: #004ea2;
+    padding: 80px 0;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.topContent {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.imageWrapper {
+    flex: 0 0 48%;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.textContent {
+    flex: 1;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 15px;
+    opacity: 0.95;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.statsGrid {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.statCard {
+    background-color: #fff;
+    padding: 25px 20px;
+    color: #333;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 140px;
+    border-radius: 4px;
+}
+
+.statNumber {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    color: #004ea2;
+    line-height: 1.3;
+}
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .topContent {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    .topContent {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .imageWrapper {
+        width: 100%;
+    }
+
+    .statsGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section7 {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .statCard {
+        padding: 20px 16px;
+        min-height: 110px;
+    }
+
+    .statNumber {
+        font-size: 2rem;
+    }
+
+    .statLabel {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .section7 {
+        padding: 40px 0;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .statNumber {
+        font-size: 1.8rem;
+    }
+
+    .statCard {
+        padding: 18px 14px;
+        min-height: 90px;
+    }
+
+    .statLabel {
+        font-size: 0.75rem;
+    }
+
+    .description {
+        font-size: 0.85rem;
+        margin-bottom: 16px;
+    }
+
+    .topContent {
+        gap: 25px;
+        margin-bottom: 35px;
+    }
+}

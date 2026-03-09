@@ -1,0 +1,122 @@
+.section3 {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    background-image: url('/S3Img1.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    z-index: 2;
+}
+
+.overlay {
+    background: linear-gradient(90deg, #004ea2 0%, #002244 100%);
+    /* Blue gradient as it looks slightly dual-toned */
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.textSide {
+    flex: 1;
+}
+
+.textSide h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    max-width: 300px;
+}
+
+.boxesSide {
+    flex: 2;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+}
+
+.whiteBox {
+    background-color: #ffffff;
+    width: 240px;
+    height: 120px;
+    border-radius: 0;
+    /* Sharp corners in image */
+}
+
+@media (max-width: 1200px) {
+    .whiteBox {
+        width: 180px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section3 {
+        min-height: 350px;
+        padding-bottom: 30px;
+    }
+
+    .overlay {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+    }
+
+    .textSide h2 {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .boxesSide {
+        justify-content: flex-start;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .whiteBox {
+        width: 120px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section3 {
+        min-height: 280px;
+        padding-bottom: 20px;
+    }
+
+    .overlay {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .textSide h2 {
+        font-size: 1.4rem;
+    }
+
+    .boxesSide {
+        gap: 10px;
+    }
+
+    .whiteBox {
+        width: 90px;
+        height: 50px;
+    }
+}

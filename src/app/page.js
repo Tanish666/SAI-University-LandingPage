@@ -1,66 +1,41 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
+import HeroSection from "./conponents/heroSection";
+import Footer from "./conponents/footer";
+import Navbar from "./conponents/navbar";
+import Section2 from "./conponents/section2";
+import Section3 from "./conponents/section3";
+import Section4 from "./conponents/section4";
+import Section5 from "./conponents/section5";
+import Section6 from "./conponents/section6";
+import Section7 from "./conponents/section7";
+import Section8 from "./conponents/section8";
+import Faq from "./conponents/faq";
 export default function Home() {
+  const primaryBlue = "#004ea2";
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="container-fluid p-0" style={{ fontFamily: "Arial, sans-serif" }}>
+      {/* Header */}
+      <Navbar />
+      {/* Hero Section */}
+      <HeroSection />
+      {/* Lead section */}
+      <Section2 />
+      {/* lead 2 section */}
+      <Section3 />
+      {/*explore our schools section */}
+      <Section4 />
+      {/* life at SAI University section marquee*/}
+      <Section5 />
+      {/* Student Life, Internships & Career Pathways section */}
+      <Section6 />
+      {/* Innovation , Inqury , Impact section */}
+      <Section7 />
+      {/* youtube videos section */}
+      <Section8 />
+      {/* faq section */}
+      <Faq />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

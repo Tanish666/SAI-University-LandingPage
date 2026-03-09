@@ -1,0 +1,298 @@
+.section6 {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.blueBox {
+    background-color: #004ea2;
+    border-radius: 0;
+    padding: 60px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.textContent {
+    flex: 1;
+}
+
+.topTitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.mainTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.statsRow {
+    display: flex;
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.statItem {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 15px;
+}
+
+.statItem:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.statValue {
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+}
+
+.statLabel {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+.imageWrapper {
+    flex: 0 0 400px;
+    position: relative;
+}
+
+.imageWithBorder {
+    width: 100%;
+    height: auto;
+    border: 5px solid #00adef;
+    /* Cyan border from image */
+    position: relative;
+    z-index: 2;
+}
+
+.marqueeSection {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.marqueeTitle {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.marqueeContainer {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.marqueeRow {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marqueeRowReverse {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    width: max-content;
+    animation: marqueeReverse 40s linear infinite;
+}
+
+@keyframes marqueeReverse {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.logoItem {
+    flex: 0 0 200px;
+    height: 100px;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.logoImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.logoPlaceholder {
+    width: 80%;
+    height: 60%;
+    background: #f5f5f5;
+}
+
+/* Animations if needed for marquee, though user says they'll handle it */
+/* But let's add a basic one so it's not and-hoc */
+
+@media (max-width: 991px) {
+    .blueBox {
+        flex-direction: column;
+        padding: 40px 30px;
+    }
+
+    .imageWrapper {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .mainTitle {
+        font-size: 2.4rem;
+    }
+
+    .marqueeSection {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section6 {
+        padding: 50px 0;
+    }
+
+    .blueBox {
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .topTitle {
+        font-size: 1rem;
+    }
+
+    .mainTitle {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .statsRow {
+        margin-top: 30px;
+        gap: 25px;
+    }
+
+    .statValue {
+        font-size: 2rem;
+    }
+
+    .imageWrapper img {
+        width: 100%;
+        height: auto;
+    }
+
+    .logoItem {
+        flex: 0 0 150px;
+        height: 80px;
+    }
+
+    .marqueeTitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .section6 {
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .blueBox {
+        padding: 24px 16px;
+        gap: 20px;
+    }
+
+    .topTitle {
+        font-size: 0.9rem;
+    }
+
+    .mainTitle {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .description {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+
+    .statsRow {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 25px;
+    }
+
+    .statItem {
+        border-left: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-left: 0;
+        padding-bottom: 10px;
+    }
+
+    .statValue {
+        font-size: 1.8rem;
+    }
+
+    .statLabel {
+        font-size: 0.8rem;
+    }
+
+    .logoItem {
+        flex: 0 0 120px;
+        height: 60px;
+    }
+
+    .marqueeTitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .marqueeSection {
+        margin-top: 40px;
+    }
+}

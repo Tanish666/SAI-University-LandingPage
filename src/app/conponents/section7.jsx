@@ -1,0 +1,47 @@
+import React from "react";
+import styles from "./section7.module.css";
+
+const Section7 = () => {
+    return (
+        <section className={styles.section7}>
+            <div className={styles.container}>
+                <div className={styles.topContent}>
+                    <div className={styles.imageWrapper}>
+                        <img src="/S7Img1.svg" alt="Research at Sai University" className={styles.image} />
+                    </div>
+                    <div className={styles.textContent}>
+                        <span className={styles.subtitle}>Research at Sai University</span>
+                        <h2 className={styles.title}>Innovation. Inquiry. Impact.</h2>
+                        <p className={styles.description}>
+                            At Sai University, research is a cornerstone of our academic vision. We foster a culture of innovation, collaboration, and excellence through rigorous inquiry and multidisciplinary exploration. Our research ecosystem is designed to address real-world challenges and deliver meaningful solutions that benefit society at large.
+                        </p>
+                        <p className={styles.description}>
+                            We encourage faculty and students to engage in transformative research that bridges disciplines, integrates technology, and drives sustainable progress.
+                        </p>
+                    </div>
+                </div>
+
+                <div className={styles.statsGrid}>
+                    <div className={styles.statCard}>
+                        <h3 className={styles.statNumber}>4</h3>
+                        <p className={styles.statLabel}>Advanced Research Labs</p>
+                    </div>
+                    <div className={styles.statCard}>
+                        <h3 className={styles.statNumber}>150+</h3>
+                        <p className={styles.statLabel}>Journal Papers Published</p>
+                    </div>
+                    <div className={styles.statCard}>
+                        <h3 className={styles.statNumber}>199</h3>
+                        <p className={styles.statLabel}>Cumulative H-Index</p>
+                    </div>
+                    <div className={styles.statCard}>
+                        <h3 className={styles.statNumber}>₹1.37</h3>
+                        <p className={styles.statLabel}>Crore in Active Research Projects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Section7;
