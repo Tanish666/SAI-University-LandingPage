@@ -5,14 +5,14 @@ export default function Navbar() {
     const primaryBlue = "#004ea2";
     return (
         <>
-            <style>{`
+            <style>{`   
                 .nav-bar-custom {
-                    padding: 10px 48px;
+                    padding: 0px 40px;
                     background: #fff;
                     border-bottom: 1px solid #dee2e6;
                 }
                 .nav-logo img {
-                    height: 50px;
+                    height: 80px;
                     object-fit: contain;
                 }
                 .nav-cta {
