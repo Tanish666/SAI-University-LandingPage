@@ -10,17 +10,21 @@ const Section7 = () => {
                         <img src="/S7Img1.svg" alt="Research at Sai University" className={styles.image} />
                     </div>
                     <div className={styles.textContent}>
-                        <span className={styles.subtitle}>Research at Sai University</span>
+                        <span className={styles.subtitle}>Research & Innovation at SaiU</span>
                         <h2 className={styles.title}>Innovation. Inquiry. Impact.</h2>
                         <p className={styles.description}>
-                            At Sai University, research is a cornerstone of our academic vision. We foster a culture of innovation, collaboration, and excellence through rigorous inquiry and multidisciplinary exploration. Our research ecosystem is designed to address real-world challenges and deliver meaningful solutions that benefit society at large.
+                            Research at Sai University is at the heart of its academic vision. The university promotes a culture of inquiry, collaboration, and multidisciplinary exploration that addresses real-world challenges and contributes meaningful solutions to society.
                         </p>
                         <p className={styles.description}>
-                            We encourage faculty and students to engage in transformative research that bridges disciplines, integrates technology, and drives sustainable progress.
+                            Students and faculty work together across disciplines—combining technology, science, humanities, and social sciences—to generate knowledge that drives innovation and progress. The research ecosystem encourages curiosity, critical thinking, and hands-on experimentation, preparing students to become future researchers, innovators, and problem-solvers.
+                        </p>
+                        <p className={styles.description}>
+                            Through strong collaborations with academic institutions and industry partners, Sai University supports impactful research initiatives that connect learning with global challenges and emerging technologies.
                         </p>
                     </div>
                 </div>
 
+                <h3 className={styles.statsHeading}>Research Highlights</h3>
                 <div className={styles.statsGrid}>
                     <div className={styles.statCard}>
                         <h3 className={styles.statNumber}>4</h3>
@@ -35,8 +39,8 @@ const Section7 = () => {
                         <p className={styles.statLabel}>Cumulative H-Index</p>
                     </div>
                     <div className={styles.statCard}>
-                        <h3 className={styles.statNumber}>₹1.37</h3>
-                        <p className={styles.statLabel}>Crore in Active Research Projects</p>
+                        <h3 className={styles.statNumber}>₹1.37 Cr</h3>
+                        <p className={styles.statLabel}>Active Research Projects</p>
                     </div>
                 </div>
             </div>

@@ -54,15 +54,49 @@
 .whiteBox {
     background-color: #ffffff;
     width: 240px;
-    height: 120px;
+    min-height: 130px;
+    padding: 20px 22px;
     border-radius: 0;
-    /* Sharp corners in image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whiteBox:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.whiteBox h3 {
+    color: #004ea2;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.whiteBox p {
+    color: #333333;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.5;
 }
 
 @media (max-width: 1200px) {
     .whiteBox {
-        width: 180px;
-        height: 90px;
+        width: 200px;
+        min-height: 110px;
+        padding: 16px 18px;
+    }
+
+    .whiteBox h3 {
+        font-size: 0.9rem;
+    }
+
+    .whiteBox p {
+        font-size: 0.75rem;
     }
 }
 
@@ -91,8 +125,9 @@
     }
 
     .whiteBox {
-        width: 120px;
-        height: 60px;
+        width: calc(50% - 10px);
+        min-height: 100px;
+        padding: 16px;
     }
 }
 
@@ -116,7 +151,16 @@
     }
 
     .whiteBox {
-        width: 90px;
-        height: 50px;
+        width: 100%;
+        min-height: auto;
+        padding: 14px 16px;
+    }
+
+    .whiteBox h3 {
+        font-size: 0.85rem;
+    }
+
+    .whiteBox p {
+        font-size: 0.72rem;
     }
 }

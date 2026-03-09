@@ -7,33 +7,33 @@ const Section5 = () => {
     const images = [
         {
             src: '/S5Img1.svg',
-            alt: 'Campus Building 1',
-            title: 'Modern Campus Architecture',
-            desc: 'Our state-of-the-art buildings are designed to inspire learning and foster a sense of community.'
+            alt: 'Hostel',
+            title: 'Hostel',
+            desc: 'Comfortable and secure residential living (in campus and outside campus - 20 mins drive away)'
         },
         {
             src: '/S5Img2.svg',
-            alt: 'Basketball Court',
-            title: 'Sports & Recreation',
-            desc: 'Advanced sports facilities including basketball courts for holistic physical development.'
+            alt: 'Sports Court',
+            title: 'Sports Court',
+            desc: 'Football, Cricket, Volleyball, Basket Ball, Badminton Court, and more'
         },
         {
             src: '/S5Img3.svg',
-            alt: 'Classroom Scene',
-            title: 'Interactive Learning',
-            desc: 'Collaborative classrooms equipped with the latest technology for an immersive educational experience.'
+            alt: 'Smart Classrooms',
+            title: 'Smart Classrooms',
+            desc: 'Technology-enabled learning environments to promote hybrid learning'
         },
         {
             src: '/S5Img4.svg',
-            alt: 'University Bus',
-            title: 'Seamless Connectivity',
-            desc: 'Reliable transportation services connecting students to various parts of the city and campus.'
+            alt: 'Transport Facility',
+            title: 'Transport Facility',
+            desc: 'Safe and convenient campus connectivity through air-conditioned bus across city'
         },
         {
             src: '/S5Img5.svg',
-            alt: 'Campus Building 2',
-            title: 'Research & Innovation',
-            desc: 'Dedicated spaces for research and innovation that push the boundaries of knowledge.'
+            alt: 'Campus Infrastructure',
+            title: 'Campus Infrastructure',
+            desc: 'A modern campus designed for future-ready education'
         },
     ];
 
@@ -48,11 +48,9 @@ const Section5 = () => {
         <section className={styles.section5}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h2>Experience Life at Sai University</h2>
+                    <h2>More Than a Campus. A Place to Grow.</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        From smart classrooms and modern labs to residential living and active student communities, Sai University provides an environment where ideas grow, friendships form, and futures begin.
                     </p>
                 </div>
 

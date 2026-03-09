@@ -39,13 +39,18 @@
 
 .videoCard {
     background-color: #e5e7eb;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 9;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    overflow: hidden;
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoCard iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
 }
 
 .videoCard:hover {

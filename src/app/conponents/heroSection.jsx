@@ -15,15 +15,17 @@ const HeroSection = () => {
                     color: #fff;
                 }
                 .hero-heading {
-                    font-size: 3.5rem;
+                    font-size: 3rem;
+                    width: 80%;
                     font-weight: 700;
                     line-height: 1.1;
                     margin-bottom: 1.5rem;
                 }
                 .hero-lead {
-                    font-size: 1.25rem;
+                    font-size: 1rem;
+                    width: 80%;
                     font-weight: 400;
-                    opacity: 0.9;
+                    opacity: 0.7;
                 }
                 .stats-bar {
                     position: absolute;
@@ -35,13 +37,19 @@ const HeroSection = () => {
                     z-index: 50;
                     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
                 }
-                .stat-number {
-                    font-size: 2.5rem;
-                    font-weight: 700;
-                    margin-bottom: 0;
+                .stat-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color: #fff;
+                    font-size: 0.95rem;
+                    font-weight: 500;
                 }
-                .stat-label {
-                    letter-spacing: 0.5px;
+                .stat-check {
+                    color: #fff;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    flex-shrink: 0;
                 }
 
                 @media (max-width: 991px) {
@@ -54,8 +62,8 @@ const HeroSection = () => {
                     .hero-lead {
                         font-size: 1.1rem;
                     }
-                    .stat-number {
-                        font-size: 1.8rem;
+                    .stat-item {
+                        font-size: 0.85rem;
                     }
                     .stats-bar {
                         left: 3%;
@@ -77,11 +85,8 @@ const HeroSection = () => {
                         left: 2%;
                         right: 2%;
                     }
-                    .stat-number {
-                        font-size: 1.4rem;
-                    }
-                    .stat-label {
-                        font-size: 0.7rem;
+                    .stat-item {
+                        font-size: 0.75rem;
                     }
                     .stat-col {
                         flex: 0 0 50% !important;
@@ -104,11 +109,8 @@ const HeroSection = () => {
                     .hero-lead {
                         font-size: 0.85rem;
                     }
-                    .stat-number {
-                        font-size: 1.2rem;
-                    }
-                    .stat-label {
-                        font-size: 0.6rem;
+                    .stat-item {
+                        font-size: 0.65rem;
                     }
                 }
             `}</style>
@@ -123,11 +125,10 @@ const HeroSection = () => {
                                 Admissions Open 2026-27
                             </div>
                             <h1 className="hero-heading">
-                                India's First International University in Chennai
+                                Design Your Own Degree at India’s First International Liberal Education University
                             </h1>
                             <p className="hero-lead mb-0">
-                                Where Multidisciplinary Education Meets Excellence.<br />
-                                Craft Your Path. Design Your Own Degree.
+                                Study across AI, Business, Law, Media, Computing and Data Science, Biotech, Psychology and more — and build a degree tailored to your career goals.
                             </p>
                         </div>
                         <div className="col-lg-5 d-none d-lg-block">
@@ -147,29 +148,37 @@ const HeroSection = () => {
                 {/* Stats Bar */}
                 <div className="stats-bar">
                     <div className="container-fluid py-3 py-md-4">
-                        <div className="row no-gutters text-center align-items-center flex-wrap">
+                        <div className="row no-gutters align-items-center flex-wrap">
                             <div className="col-6 col-md-3 stat-col" style={{ borderRight: '1px solid rgba(255,255,255,0.3)' }}>
-                                <div className="px-2">
-                                    <h2 className="stat-number">30+</h2>
-                                    <div className="text-white small stat-label">Undergraduate Programs</div>
+                                <div className="px-3">
+                                    <div className="stat-item">
+                                        <span className="stat-check">✔</span>
+                                        <span>UGC Recognized</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-6 col-md-3 stat-col" style={{ borderRight: '1px solid rgba(255,255,255,0.3)' }}>
-                                <div className="px-2">
-                                    <h2 className="stat-number">8+</h2>
-                                    <div className="text-white small stat-label">Undergraduate Programs</div>
+                                <div className="px-3">
+                                    <div className="stat-item">
+                                        <span className="stat-check">✔</span>
+                                        <span>Multidisciplinary Global Curriculum</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-6 col-md-3 stat-col" style={{ borderRight: '1px solid rgba(255,255,255,0.3)' }}>
-                                <div className="px-2">
-                                    <h2 className="stat-number">130+</h2>
-                                    <div className="text-white small stat-label">Research Papers Published</div>
+                                <div className="px-3">
+                                    <div className="stat-item">
+                                        <span className="stat-check">✔</span>
+                                        <span>International Faculty & Research Mentors</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-6 col-md-3 stat-col">
-                                <div className="px-2">
-                                    <h2 className="stat-number">1,000+</h2>
-                                    <div className="text-white small stat-label">Students from Across India</div>
+                                <div className="px-3">
+                                    <div className="stat-item">
+                                        <span className="stat-check">✔</span>
+                                        <span>Industry Internships & Career Support</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
