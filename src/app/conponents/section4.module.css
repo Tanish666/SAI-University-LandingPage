@@ -43,7 +43,11 @@
     padding: 20px;
     background-color: #e0e0e0;
     border: none;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    flex: 1;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -164,6 +168,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 8px;
+        justify-content: center;
     }
 
     .schoolTab {

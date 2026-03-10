@@ -54,7 +54,7 @@
 .whiteBox {
     background-color: #ffffff;
     width: 240px;
-    min-height: 130px;
+    min-height: 150px;
     padding: 20px 22px;
     border-radius: 0;
     display: flex;

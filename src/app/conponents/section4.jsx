@@ -13,7 +13,7 @@ const schoolsData = [
             { name: "Economics", duration: "3 Year" },
             { name: "Politics, Philosophy and Economics (PPE)", duration: "3 Year" },
         ],
-        logo: "/UniversityLogo.svg" // Using UniversityLogo as placeholder
+        logo: "/school of arts and science.avif" // Using UniversityLogo as placeholder
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ const schoolsData = [
             { name: "Data Science", duration: "4 Year" },
             { name: "Cyber Security", duration: "4 Year" },
         ],
-        logo: "/UniversityLogo.svg"
+        logo: "/school of computer and science.avif"
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ const schoolsData = [
             { name: "AI & Machine Learning", duration: "4 Year" },
             { name: "Robotics", duration: "4 Year" },
         ],
-        logo: "/UniversityLogo.svg"
+        logo: "/school of ai.avif"
     },
     {
         id: 4,
@@ -41,7 +41,7 @@ const schoolsData = [
             { name: "Information Technology", duration: "4 Year" },
             { name: "Software Engineering", duration: "4 Year" },
         ],
-        logo: "/UniversityLogo.svg"
+        logo: "/school of technology.avif"
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ const schoolsData = [
             { name: "Marketing", duration: "3 Year" },
             { name: "Finance", duration: "3 Year" },
         ],
-        logo: "/UniversityLogo.svg"
+        logo: "/school of business.avif"
     },
     {
         id: 6,
@@ -60,7 +60,7 @@ const schoolsData = [
             { name: "LLB", duration: "3 Year" },
             { name: "LLM", duration: "2 Year" },
         ],
-        logo: "/UniversityLogo.svg"
+        logo: "/school of law.avif"
     },
     {
         id: 7,
@@ -69,7 +69,7 @@ const schoolsData = [
             { name: "Mass Communication", duration: "3 Year" },
             { name: "Journalism", duration: "3 Year" },
         ],
-        logo: "/UniversityLogo.svg"
+        logo: "/school of media.avif"
     },
     {
         id: 8,
@@ -78,7 +78,7 @@ const schoolsData = [
             { name: "Nursing", duration: "4 Year" },
             { name: "Physiotherapy", duration: "4 Year" },
         ],
-        logo: "/UniversityLogo.svg"
+        logo: "/school of Allied Health Sciences.avif"
     }
 ];
 
@@ -113,7 +113,7 @@ const Section4 = () => {
                                 <div className={styles.logoContainer}>
                                     {/* Since I don't have the specific school logos, I'll use text or a placeholder */}
                                     <Image
-                                        src="/UniversityLogo.svg"
+                                        src={activeSchool.logo}
                                         alt="School Logo"
                                         width={60}
                                         height={60}

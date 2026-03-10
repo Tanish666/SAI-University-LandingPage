@@ -10,6 +10,11 @@ export default function Navbar() {
                     padding: 0px 40px;
                     background: #fff;
                     border-bottom: 1px solid #dee2e6;
+                    position: sticky;
+                    top: 0;
+                    z-index: 1000;
+                    width: 100%;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
                 }
                 .nav-logo img {
                     height: 80px;
@@ -17,7 +22,6 @@ export default function Navbar() {
                 }
                 .nav-cta {
                     background-color: ${primaryBlue};
-                    border-radius: 4px;
                     font-weight: 500;
                     color: #fff;
                     border: none;
