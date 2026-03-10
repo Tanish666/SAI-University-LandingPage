@@ -1,258 +1,223 @@
 .section5 {
+    min-height: 100vh;
     padding: 80px 0;
     background-color: #f9f9f9;
     text-align: center;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.section5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 193, 7, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
+    width: 100%;
+    z-index: 1;
 }
 
 .header {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    padding: 0 20px;
 }
 
 .header h2 {
-    font-size: 42px;
-    font-weight: 700;
-    color: #1a1a1a;
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 600;
+    color: #000;
     margin-bottom: 20px;
+    letter-spacing: -0.01em;
 }
 
 .header p {
-    font-size: 16px;
-    color: #666;
-    max-width: 800px;
+    font-size: 18px;
+    color: #444;
+    max-width: 900px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.5;
+    opacity: 0.8;
 }
 
 /* Carousel Styles */
 .carouselWrapper {
     position: relative;
     width: 100%;
-    margin: 40px 0;
-    overflow: hidden;
+    margin: 20px 0;
+    overflow: visible;
     padding: 20px 0;
-    height: 650px;
-    /* Fixed height to prevent jumping */
+    height: 380px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    --card-width: 237px;
 }
 
 .carouselContent {
     display: flex;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
     align-items: center;
     width: 100%;
+    transform: translateX(calc(-1 * var(--active-index) * var(--card-width) + 50% - var(--card-width) / 2));
 }
 
 .imageCard {
-    flex: 0 0 33.333%;
-    /* Larger cards - 3 in view */
-    padding: 0;
-    /* No padding between cards */
-    transition: all 0.8s ease;
+    flex: 0 0 var(--card-width);
+    width: var(--card-width);
+    padding: 0 10px;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
     cursor: pointer;
+    perspective: 1000px;
 }
 
 .imageInner {
     width: 100%;
-    background-color: #f9f9f9;
+    border-radius: 4px;
     overflow: hidden;
-    transition: all 0.6s ease;
-    padding: 0;
-    /* Ensuring no padding */
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Specific heights to match the reference image precisely */
-
-/* Outer cards (Smallest) */
+/* Outer cards (Smallest / Indices +/- 2) */
 .outerCard .imageInner {
-    height: 320px;
+    height: 220px;
     opacity: 0.5;
-    transform: scale(0.9);
+    transform: scale(0.8);
+    filter: brightness(0.9);
 }
 
-/* Side cards (Medium) */
+/* Side cards (Medium / Indices +/- 1) */
 .sideCard .imageInner {
-    height: 480px;
-    opacity: 0.85;
-    transform: scale(0.92);
+    height: 260px;
+    opacity: 0.8;
+    transform: scale(0.9);
+    filter: brightness(0.95);
 }
 
-/* Active center card (Huge) */
+/* Active center card (Largest / Index 0) */
 .activeCard .imageInner {
-    height: 600px;
+    height: 309px;
     opacity: 1;
-    transform: scale(1.02);
-
+    transform: scale(1);
 }
 
 .cardImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.activeCard:hover .cardImage {
+    transform: scale(1.1);
 }
 
 /* Text Content Area */
 .textContentArea {
-    margin: 30px auto;
-    max-width: 850px;
+    margin: 30px auto 20px;
+    width: 100%;
     text-align: center;
-    min-height: 140px;
+    transition: all 0.5s ease;
 }
 
 .textContentArea h3 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
 }
 
-.textContentArea p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-/* Dots Styling (matching the image) */
+/* Dots Styling */
 .dots {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     margin-top: 20px;
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background-color: #d1d1d1;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
+.dot:hover {
+    background-color: #b1b1b1;
+}
+
 .dotActive {
-    width: 50px;
-    height: 14px;
-    border-radius: 7px;
+    width: 35px;
+    height: 8px;
+    border-radius: 4px;
     background-color: #ffc107;
     cursor: pointer;
 }
 
-@media (max-width: 1024px) {
-    .carouselWrapper {
-        height: 550px;
+@media (max-width: 1200px) {
+    .imageCard {
+        --card-width: 250px;
     }
+}
 
-    .activeCard .imageInner {
-        height: 480px;
-    }
-
-    .sideCard .imageInner {
-        height: 380px;
+@media (max-width: 992px) {
+    .imageCard {
+        --card-width: 220px;
     }
 }
 
 @media (max-width: 768px) {
     .section5 {
-        padding: 50px 0;
+        min-height: auto;
+        padding: 60px 0;
     }
 
-    .header h2 {
-        font-size: 28px;
-    }
-
-    .header p {
-        font-size: 14px;
-    }
-
-    .header {
-        margin-bottom: 30px;
+    .container {
+        padding: 0 20px;
     }
 
     .carouselWrapper {
-        height: 380px;
-        margin: 25px 0;
-    }
-
-    .imageCard {
-        flex: 0 0 80%;
+        height: 350px;
+        --card-width: 280px;
     }
 
     .activeCard .imageInner {
-        height: 340px;
+        height: 300px;
     }
 
     .sideCard .imageInner {
-        height: 260px;
-        opacity: 0.3;
+        height: 240px;
+        opacity: 0.4;
     }
 
     .outerCard .imageInner {
-        height: 200px;
-        opacity: 0.15;
-    }
-
-    .textContentArea {
-        margin: 20px auto;
-        min-height: 100px;
-    }
-
-    .textContentArea h3 {
-        font-size: 22px;
-    }
-
-    .textContentArea p {
-        font-size: 14px;
-    }
-
-    .dots {
-        gap: 8px;
-    }
-
-    .dot {
-        width: 10px;
-        height: 10px;
-    }
-
-    .dotActive {
-        width: 36px;
-        height: 12px;
+        height: 180px;
+        opacity: 0.2;
     }
 }
 
 @media (max-width: 480px) {
-    .section5 {
-        padding: 40px 0;
-    }
-
-    .container {
-        padding: 0 12px;
-    }
-
     .header h2 {
-        font-size: 22px;
-    }
-
-    .header p {
-        font-size: 13px;
+        font-size: 32px;
     }
 
     .carouselWrapper {
         height: 300px;
-        margin: 20px 0;
-    }
-
-    .imageCard {
-        flex: 0 0 90%;
+        --card-width: 240px;
     }
 
     .activeCard .imageInner {
@@ -261,20 +226,14 @@
 
     .sideCard .imageInner {
         height: 200px;
-        opacity: 0.2;
-    }
-
-    .textContentArea h3 {
-        font-size: 18px;
-    }
-
-    .textContentArea p {
-        font-size: 13px;
-        max-width: 100%;
     }
 
     .textContentArea {
-        min-height: 80px;
-        margin: 15px auto;
+        margin-top: 20px;
+        min-height: 60px;
+    }
+
+    .textContentArea h3 {
+        font-size: 20px;
     }
 }

@@ -24,7 +24,6 @@ const Section7 = () => {
                     </div>
                 </div>
 
-                <h3 className={styles.statsHeading}>Research Highlights</h3>
                 <div className={styles.statsGrid}>
                     <div className={styles.statCard}>
                         <h3 className={styles.statNumber}>4</h3>

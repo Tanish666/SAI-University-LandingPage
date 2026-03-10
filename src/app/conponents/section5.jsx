@@ -48,16 +48,16 @@ const Section5 = () => {
         <section className={styles.section5}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h2>More Than a Campus. A Place to Grow.</h2>
+                    <h2>Experience Life at Sai University</h2>
                     <p>
-                        From smart classrooms and modern labs to residential living and active student communities, Sai University provides an environment where ideas grow, friendships form, and futures begin.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     </p>
                 </div>
 
                 <div className={styles.carouselWrapper}>
                     <div
                         className={styles.carouselContent}
-                        style={{ transform: `translateX(calc(-${activeIndex * 33.333}% + 33.333%))` }}
+                        style={{ '--active-index': activeIndex }}
                     >
                         {images.map((item, index) => {
                             const diff = (index - activeIndex + images.length) % images.length;
@@ -66,10 +66,11 @@ const Section5 = () => {
                             let cardClass = styles.imageCard;
                             if (relativePos === 0) cardClass += ` ${styles.activeCard}`;
                             else if (Math.abs(relativePos) === 1) cardClass += ` ${styles.sideCard}`;
-                            else cardClass += ` ${styles.outerCard}`;
+                            else if (Math.abs(relativePos) === 2) cardClass += ` ${styles.outerCard}`;
+                            else cardClass += ` ${styles.farCard}`;
 
                             return (
-                                <div key={index} className={cardClass}>
+                                <div key={index} className={cardClass} onClick={() => setActiveIndex(index)}>
                                     <div className={styles.imageInner}>
                                         <img
                                             src={item.src}
@@ -85,7 +86,6 @@ const Section5 = () => {
 
                 <div className={styles.textContentArea}>
                     <h3>{images[activeIndex].title}</h3>
-                    <p>{images[activeIndex].desc}</p>
                 </div>
 
 
