@@ -1,11 +1,55 @@
-import React from "react";
+'use client'
+import React, { useRef } from "react";
 import styles from "./section8.module.css";
 
 
 const Section8 = () => {
+    const sliderRef = useRef(null);
+
+    const scrollSlider = (direction) => {
+        if (sliderRef.current) {
+            const scrollAmount = direction === 'next' ? 400 : -400;
+            sliderRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    };
+
+    const studentSpeaks = [
+        { id: 1, videoUrl: "https://www.youtube.com/embed/_T_7TPX7clg", title: "SaiU Student Speaks 1" },
+        { id: 2, videoUrl: "https://www.youtube.com/embed/Gaw8B7XHJzE", title: "SaiU Student Speaks 2" },
+        { id: 3, videoUrl: "https://www.youtube.com/embed/L1GsB1eKat0", title: "SaiU Student Speaks 3" },
+        { id: 4, videoUrl: "https://www.youtube.com/embed/uEtKaA7SoXw", title: "SaiU Student Speaks 4" },
+        { id: 5, videoUrl: "https://www.youtube.com/embed/fTwdJgV4ZjQ", title: "SaiU Student Speaks 5" },
+    ];
+
     return (
         <section className={styles.section8}>
             <div className={styles.container}>
+                {/* Student Speaks Slider Section */}
+                <div className={styles.speaksSection}>
+                    <h2 className={styles.speaksTitle}>SaiU Student Speaks</h2>
+                    <div className={styles.sliderWrapper}>
+                        <button className={styles.sliderBtn} onClick={() => scrollSlider('prev')} aria-label="Previous">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <div className={styles.slider} ref={sliderRef}>
+                            {studentSpeaks.map((video) => (
+                                <div key={video.id} className={styles.speaksCard}>
+                                    <iframe
+                                        src={video.videoUrl}
+                                        title={video.title}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            ))}
+                        </div>
+                        <button className={styles.sliderBtn} onClick={() => scrollSlider('next')} aria-label="Next">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+
                 {/* Experience Life Section */}
                 <div className={styles.header}>
                     <h2 className={styles.title}>Discover Life at SaiU</h2>

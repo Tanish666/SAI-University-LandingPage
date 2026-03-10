@@ -9,18 +9,19 @@ const Footer = () => {
                 .footer-section {
                     background-color: ${primaryBlue};
                     color: white;
-                    padding: 60px 0 20px 0;
+                    padding: 45px 70px 15px 70px;
                 }
                 .footer-heading {
-                    font-size: 2.4rem;
-                    font-weight: 700;
+                    font-size: 30px;
+                    font-weight: 500;
                     margin-bottom: 0.5rem;
                 }
                 .footer-desc {
-                    font-size: 1.1rem;
+                    font-size: 14px;
                     opacity: 0.9;
                     max-width: 600px;
-                    font-weight: 400;
+                    font-weight: 500;
+                    color: #FFFFFF;
                 }
                 .footer-cta {
                     background: #fff;
@@ -96,7 +97,7 @@ const Footer = () => {
             <footer className="footer-section">
                 <div className="container-fluid px-md-5 px-3">
                     {/* Top Section */}
-                    <div className="row align-items-center mb-4 mb-md-5">
+                    <div className="row align-items-center mb-3">
                         <div className="col-lg-2 col-md-3 col-4 mb-3 mb-md-0">
                             <div style={{ backgroundColor: 'white', padding: '15px', borderRadius: '4px', display: 'flex', justifyContent: 'center', alignItems: 'center', width: 'fit-content' }}>
                                 <img src="/UniversityLogo.svg" alt="SAI University" style={{ height: '70px', maxWidth: '100%' }} />
@@ -105,7 +106,8 @@ const Footer = () => {
                         <div className="col-lg-7 col-md-6 col-8 mb-3 mb-md-0">
                             <h2 className="footer-heading">Begin Your Journey at Sai University</h2>
                             <p className="footer-desc mb-0">
-                                Secure your place in a future-ready university built for leadership, innovation, and global impact.
+                                Secure your place in a future-ready university built for leadership,<br />
+                                innovation, and global impact.
                             </p>
                         </div>
                         <div className="col-lg-3 col-md-3 col-12 text-md-right text-center mt-2 mt-md-0">
@@ -116,7 +118,7 @@ const Footer = () => {
                     </div>
 
                     {/* Info Bar Section */}
-                    <div className="row mt-4 mt-md-5 mb-4 align-items-start">
+                    <div className="row mt-0 mb-3 align-items-start">
                         {/* Location */}
                         <div className="col-md-4 col-12 mb-3 mb-md-0 d-flex">
                             <div className="mr-3" style={{ minWidth: '24px' }}>
@@ -152,7 +154,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)', margin: '30px 0 15px 0' }}></div>
+                    <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)', margin: '15px 0 10px 0' }}></div>
 
                     {/* Footer Bottom */}
                     <div className="text-center">

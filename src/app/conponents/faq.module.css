@@ -9,14 +9,12 @@
     width: 38%;
 }
 
-.leftColumn h2 {
-    font-size: 3.5rem;
-    /* Match the large image heading */
-    font-weight: 400;
+.faqTitle {
+    font-size: 45px;
+    font-weight: 500;
     line-height: 1;
-    color: #1a1a1a;
+    color: #000000;
     margin: 0;
-    max-width: 350px;
 }
 
 .rightColumn {
@@ -88,10 +86,11 @@
         width: 100%;
     }
 
-    .leftColumn h2 {
+    .faqTitle {
         font-size: 2.8rem;
         margin-bottom: 30px;
-        max-width: 100%;
+        white-space: normal;
+        text-align: center;
     }
 }
 
@@ -100,10 +99,12 @@
         padding: 35px 12px;
     }
 
-    .leftColumn h2 {
+    .faqTitle {
         font-size: 1.8rem;
         margin-bottom: 20px;
         line-height: 1.1;
+        white-space: normal;
+        text-align: center;
     }
 
     .faqHeader {

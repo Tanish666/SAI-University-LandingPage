@@ -84,7 +84,7 @@ const Faq = () => {
     return (
         <section className={styles.faqSection}>
             <div className={styles.leftColumn} id="faq-heading">
-                <h2>Frequently Asked<br />Questions</h2>
+                <h2 className={styles.faqTitle}>Frequently Asked<br />Questions</h2>
             </div>
             <div className={styles.rightColumn}>
                 {faqData.map((item, index) => (

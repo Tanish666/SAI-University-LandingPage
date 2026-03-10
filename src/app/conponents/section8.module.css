@@ -4,6 +4,101 @@
     font-family: 'Outfit', 'Inter', sans-serif;
 }
 
+/* Student Speaks Slider */
+.speaksSection {
+    margin-bottom: 80px;
+    width: 100%;
+}
+
+.speaksTitle {
+    font-size: 42px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.sliderWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 -10px;
+    /* Slight overflow to allow cards to reach edges on mobile if needed */
+    padding: 0 10px;
+}
+
+.slider {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5px 30px;
+    /* Extra bottom padding for shadows */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.speaksCard {
+    flex: 0 0 calc(25% - 18px);
+    /* 4 cards per row on large screens */
+    min-width: 280px;
+    aspect-ratio: 9 / 16;
+    background-color: #f3f4f6;
+    border-radius: 20px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.speaksCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.speaksCard iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.sliderBtn {
+    flex-shrink: 0;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: all 0.3s ease;
+    color: #1a1a1a;
+}
+
+.sliderBtn:hover {
+    background: #004ea2;
+    border-color: #004ea2;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.sliderBtn svg {
+    width: 28px;
+    height: 28px;
+}
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -17,7 +112,7 @@
 
 .title {
     font-size: 42px;
-    font-weight: 600;
+    font-weight: 500;
     color: #000000;
     margin-bottom: 20px;
 }
@@ -34,7 +129,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
+    /* Increased for better separation */
 }
 
 .videoCard {
@@ -88,6 +184,7 @@
     font-size: 48px;
     font-weight: 600;
     margin-bottom: 20px;
+    white-space: nowrap;
 }
 
 .bannerSubtitle {
@@ -160,6 +257,16 @@
     .bannerImage {
         height: 420px;
     }
+
+    .speaksTitle,
+    .title {
+        font-size: 34px;
+    }
+
+    .speaksCard {
+        flex: 0 0 calc(33.33% - 16px);
+        min-width: 240px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -230,6 +337,33 @@
         font-size: 14px;
         padding: 10px 20px;
     }
+
+    .speaksTitle,
+    .title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .speaksCard {
+        flex: 0 0 calc(70% - 12px);
+        /* Adjusted for better peek on mobile */
+        min-width: 260px;
+        border-radius: 15px;
+    }
+
+    .sliderBtn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .slider {
+        gap: 16px;
+        padding-bottom: 20px;
+    }
+
+    .speaksSection {
+        margin-bottom: 60px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -246,12 +380,14 @@
     }
 
     .subtitle {
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 10px;
     }
 
     .videoGrid {
-        margin-bottom: 40px;
-        gap: 12px;
+        margin-bottom: 50px;
+        gap: 15px;
     }
 
     .ytIcon {
@@ -260,23 +396,47 @@
     }
 
     .banner {
-        padding: 24px 16px;
-        margin-top: 40px;
-        min-height: auto;
+        padding: 40px 20px;
+        margin-top: 50px;
+        border-radius: 12px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .bannerTitle {
-        font-size: 20px;
+        font-size: 24px;
         margin-bottom: 12px;
+        line-height: 1.3;
     }
 
     .bannerSubtitle {
-        font-size: 13px;
-        margin-bottom: 16px;
+        font-size: 14px;
+        margin-bottom: 20px;
     }
 
     .ctaButton {
-        font-size: 13px;
-        padding: 10px 16px;
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .speaksTitle,
+    .title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .speaksCard {
+        flex: 0 0 85%;
+        min-width: unset;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .sliderBtn {
+        display: none;
+    }
+
+    .sliderWrapper {
+        margin: 0 -12px;
+        padding: 0 12px;
     }
 }
