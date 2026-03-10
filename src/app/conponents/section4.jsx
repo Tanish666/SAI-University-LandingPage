@@ -115,8 +115,8 @@ const Section4 = () => {
                                     <Image
                                         src={activeSchool.logo}
                                         alt="School Logo"
-                                        width={60}
-                                        height={60}
+                                        width={150}
+                                        height={75}
                                         className={styles.schoolLogo}
                                     />
                                 </div>

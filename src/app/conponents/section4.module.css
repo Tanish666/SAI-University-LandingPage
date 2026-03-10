@@ -1,12 +1,13 @@
 .section4 {
-    padding: 80px 0;
+    padding: 60px 0;
     background-color: #fff;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 .header {
@@ -40,12 +41,13 @@
 }
 
 .schoolTab {
-    padding: 20px;
+    padding: 20px 30px;
     background-color: #e0e0e0;
     border: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    text-align: left;
     white-space: nowrap;
     flex: 1;
     font-size: 16px;
@@ -62,16 +64,18 @@
 
 .schoolDetails {
     flex: 1;
-    background-color: #f0f0f0;
-    padding: 40px;
+    background-color: #f1f2f4;
+    padding: 40px 40px 30px 40px;
     position: relative;
+    border: 1px solid #e0e0e0;
+    min-height: 620px;
 }
 
 .detailsHeader {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .schoolInfo {
@@ -80,23 +84,35 @@
     gap: 20px;
 }
 
+.logoContainer {
+    background-color: #fff;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .schoolLogo {
-    width: 100px;
+    width: 120px;
     height: auto;
+    object-fit: contain;
 }
 
 .schoolName {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 600;
     color: #000;
 }
 
 .programsBadge {
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: #004ea2;
     color: #fff;
     padding: 10px 20px;
-    font-weight: 600;
-    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .programsList {
@@ -107,25 +123,21 @@
 .programItem {
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
-    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #999;
 }
 
 .programItem:last-child {
-    border-bottom: none;
-}
-
-.programTop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border-bottom: 1px solid #999;
+    margin-bottom: 0px;
 }
 
 .programName {
     font-size: 18px;
     font-weight: 600;
     color: #000;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .programInfo {
@@ -147,6 +159,7 @@
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    font-size: 16px;
     transition: transform 0.2s;
 }
 
@@ -156,6 +169,8 @@
 
 .arrowIcon {
     font-size: 18px;
+    color: #004ea2;
+    font-weight: 600;
 }
 
 @media (max-width: 992px) {
@@ -177,17 +192,23 @@
     }
 
     .schoolDetails {
-        padding: 30px;
+        padding: 40px;
     }
 
     .detailsHeader {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+        gap: 20px;
+    }
+
+    .programsBadge {
+        position: static;
+        display: inline-block;
+        margin-top: 10px;
     }
 
     .schoolName {
-        font-size: 24px;
+        font-size: 26px;
     }
 }
 
@@ -227,7 +248,7 @@
     }
 
     .schoolLogo {
-        width: 50px;
+        width: 80px;
     }
 
     .schoolName {
