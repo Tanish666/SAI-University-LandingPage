@@ -1,7 +1,7 @@
 .section3 {
     position: relative;
     width: 100%;
-    min-height: 500px;
+    min-height: 850px;
     display: flex;
     align-items: flex-end;
     padding-bottom: 40px;
@@ -54,7 +54,7 @@
 .whiteBox {
     background-color: #ffffff;
     width: 240px;
-    min-height: 150px;
+    min-height: 120px;
     padding: 20px 22px;
     border-radius: 0;
     display: flex;
@@ -102,7 +102,7 @@
 
 @media (max-width: 992px) {
     .section3 {
-        min-height: 350px;
+        min-height: 650px;
         padding-bottom: 30px;
     }
 
@@ -133,7 +133,7 @@
 
 @media (max-width: 575px) {
     .section3 {
-        min-height: 280px;
+        min-height: 550px;
         padding-bottom: 20px;
     }
 
