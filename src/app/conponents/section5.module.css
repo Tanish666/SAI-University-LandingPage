@@ -77,9 +77,9 @@
     flex: 0 0 var(--card-width);
     width: var(--card-width);
     padding: 0 10px;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
     cursor: pointer;
     perspective: 1000px;
+    position: relative;
 }
 
 .imageInner {
@@ -95,6 +95,15 @@
     opacity: 0.5;
     transform: scale(0.8);
     filter: brightness(0.9);
+}
+
+/* Far cards (Hidden / Indices > 2) */
+.farCard .imageInner {
+    height: 180px;
+    opacity: 0;
+    transform: scale(0.6);
+    filter: brightness(0.8);
+    pointer-events: none;
 }
 
 /* Side cards (Medium / Indices +/- 1) */
