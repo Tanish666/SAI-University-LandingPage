@@ -40,17 +40,19 @@ const HeroSection = () => {
                 }
                 .stat-item {
                     display: flex;
-                    align-items: center;
-                    gap: 10px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 8px;
                     color: #fff;
                     font-size: 0.95rem;
                     font-weight: 500;
                 }
                 .stat-check {
                     color: #fff;
-                    font-size: 1.2rem;
+                    font-size: 1.5rem;
                     font-weight: 700;
                     flex-shrink: 0;
+                    line-height:1;
                 }
 
                 @media (max-width: 991px) {
@@ -68,6 +70,10 @@ const HeroSection = () => {
                     }
                     .stat-item {
                         font-size: 0.85rem;
+                        align-items: flex-start;
+                    }
+                    .stat-check {
+                        font-size: 1.4rem;
                     }
                     .stats-bar {
                         left: 3%;
@@ -101,6 +107,10 @@ const HeroSection = () => {
                     }
                     .stat-item {
                         font-size: 0.8rem;
+                        align-items: flex-start;
+                    }
+                    .stat-check {
+                        font-size: 1.2rem;
                     }
                     .stat-col {
                         flex: 0 0 50% !important;
@@ -131,6 +141,10 @@ const HeroSection = () => {
                     .stat-item {
                         font-size: 0.7rem;
                         gap: 5px;
+                        align-items: flex-start;
+                    }
+                    .stat-check {
+                        font-size: 1.1rem;
                     }
                 }
             `}</style>
