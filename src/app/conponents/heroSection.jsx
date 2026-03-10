@@ -16,16 +16,17 @@ const HeroSection = () => {
                 }
                 .hero-heading {
                     font-size: 3rem;
-                    width: 80%;
+                    width: 85%;
                     font-weight: 700;
-                    line-height: 1.1;
+                    line-height: 1.2;
                     margin-bottom: 1.5rem;
                 }
                 .hero-lead {
-                    font-size: 1rem;
+                    font-size: 1.15rem;
                     width: 80%;
                     font-weight: 400;
-                    opacity: 0.7;
+                    opacity: 0.9;
+                    line-height: 1.6;
                 }
                 .stats-bar {
                     position: absolute;
@@ -54,13 +55,16 @@ const HeroSection = () => {
 
                 @media (max-width: 991px) {
                     .hero-section {
-                        min-height: 500px;
+                        min-height: 550px;
+                        padding-bottom: 60px;
                     }
                     .hero-heading {
-                        font-size: 2.5rem;
+                        font-size: 2.8rem;
+                        width: 100%;
                     }
                     .hero-lead {
                         font-size: 1.1rem;
+                        width: 100%;
                     }
                     .stat-item {
                         font-size: 0.85rem;
@@ -73,44 +77,60 @@ const HeroSection = () => {
 
                 @media (max-width: 767px) {
                     .hero-section {
-                        min-height: 420px;
+                        min-height: 500px;
+                        padding-top: 80px;
+                        padding-bottom: 120px;
+                        display: block; /* Stack naturally on mobile if needed */
                     }
                     .hero-heading {
-                        font-size: 1.8rem;
+                        font-size: 2.4rem;
+                        width: 100%;
+                        margin-bottom: 1rem;
                     }
                     .hero-lead {
-                        font-size: 0.95rem;
+                        font-size: 1.05rem;
+                        width: 100%;
+                        margin-bottom: 2rem;
                     }
                     .stats-bar {
-                        left: 2%;
-                        right: 2%;
+                        left: 15px;
+                        right: 15px;
+                        bottom: 0;
+                        transform: translateY(50%);
+                        border-radius: 8px;
                     }
                     .stat-item {
-                        font-size: 0.75rem;
+                        font-size: 0.8rem;
                     }
                     .stat-col {
                         flex: 0 0 50% !important;
                         max-width: 50% !important;
-                        margin-bottom: 12px;
+                        margin-bottom: 15px;
                         border-right: none !important;
                     }
                     .stat-col:nth-child(odd) {
                         border-right: 1px solid rgba(255,255,255,0.3) !important;
                     }
+                    .stat-col:nth-last-child(-n+2) {
+                        margin-bottom: 0px;
+                    }
                 }
 
                 @media (max-width: 480px) {
                     .hero-section {
-                        min-height: 350px;
+                        min-height: 480px;
+                        padding-top: 60px;
+                        padding-bottom: 140px;
                     }
                     .hero-heading {
-                        font-size: 1.5rem;
+                        font-size: 2rem;
                     }
                     .hero-lead {
-                        font-size: 0.85rem;
+                        font-size: 0.95rem;
                     }
                     .stat-item {
-                        font-size: 0.65rem;
+                        font-size: 0.7rem;
+                        gap: 5px;
                     }
                 }
             `}</style>
