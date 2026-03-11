@@ -78,9 +78,9 @@ const Section5 = () => {
         <section className={styles.section5}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h2>Experience Life at Sai University</h2>
+                    <h2>More Than a Campus. A Place to Grow.</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        From smart classrooms and modern labs to residential living and active student communities, Sai University provides an environment where ideas grow, friendships form, and futures begin.
                     </p>
                 </div>
 
@@ -129,6 +129,7 @@ const Section5 = () => {
 
                 <div className={styles.textContentArea}>
                     <h3>{displayImages[activeIndex]?.title || ''}</h3>
+                    <p>{displayImages[activeIndex]?.desc || ''}</p>
                 </div>
 
 

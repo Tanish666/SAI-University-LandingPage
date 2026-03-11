@@ -148,7 +148,7 @@ const HeroSection = () => {
                     }
                 }
             `}</style>
-            <section className="hero-section">
+            <section id="hero" className="hero-section">
                 <div className="container-fluid px-md-5 px-3 py-5">
                     <div className="row align-items-center no-gutters">
                         <div className="col-lg-7">

@@ -28,6 +28,9 @@ export default function Navbar() {
                     padding: 10px 24px;
                     font-size: 16px;
                     white-space: nowrap;
+                    text-decoration: none;
+                    display: inline-block;
+                    cursor: pointer;
                 }
                 @media (max-width: 768px) {
                     .nav-bar-custom {
@@ -59,9 +62,9 @@ export default function Navbar() {
                     <a className="navbar-brand nav-logo" href="#">
                         <img src="/UniversityLogo.svg" alt="Logo" />
                     </a>
-                    <button className="nav-cta">
+                    <a href="#hero" className="nav-cta">
                         Admissions Open 2026-27
-                    </button>
+                    </a>
                 </div>
             </nav>
         </>

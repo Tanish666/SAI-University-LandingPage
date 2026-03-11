@@ -82,6 +82,44 @@ const schoolsData = [
     }
 ];
 
+const SchoolDetailsContent = ({ school }) => {
+    if (!school) return null;
+    return (
+        <>
+            <div className={styles.detailsHeader}>
+                <div className={styles.schoolInfo}>
+                    <div className={styles.logoContainer}>
+                        {/* Since I don't have the specific school logos, I'll use text or a placeholder */}
+                        <Image
+                            src={school.logo}
+                            alt="School Logo"
+                            width={150}
+                            height={75}
+                            className={styles.schoolLogo}
+                        />
+                    </div>
+                    <h3 className={styles.schoolName}>{school.name}</h3>
+                </div>
+                <div className={styles.programsBadge}>Programs Offered</div>
+            </div>
+
+            <div className={styles.programsList}>
+                {school.programs.map((program, index) => (
+                    <div key={index} className={styles.programItem}>
+                        <div className={styles.programName}>{program.name}</div>
+                        <div className={styles.programInfo}>
+                            <div className={styles.duration}>Duration : {program.duration}</div>
+                            <a href="#" className={styles.applyLink}>
+                                Apply Now <span className={styles.arrowIcon}>↗</span>
+                            </a>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
+};
+
 const Section4 = () => {
     const [activeSchoolId, setActiveSchoolId] = useState(1);
     const activeSchool = schoolsData.find(s => s.id === activeSchoolId);
@@ -95,45 +133,44 @@ const Section4 = () => {
                 </div>
 
                 <div className={styles.contentWrapper}>
-                    <div className={styles.schoolsList}>
-                        {schoolsData.map((school) => (
-                            <button
-                                key={school.id}
-                                className={`${styles.schoolTab} ${activeSchoolId === school.id ? styles.activeTab : ''}`}
-                                onClick={() => setActiveSchoolId(school.id)}
-                            >
-                                {school.name}
-                            </button>
-                        ))}
-                    </div>
-
-                    <div className={styles.schoolDetails}>
-                        <div className={styles.detailsHeader}>
-                            <div className={styles.schoolInfo}>
-                                <div className={styles.logoContainer}>
-                                    {/* Since I don't have the specific school logos, I'll use text or a placeholder */}
-                                    <Image
-                                        src={activeSchool.logo}
-                                        alt="School Logo"
-                                        width={150}
-                                        height={75}
-                                        className={styles.schoolLogo}
-                                    />
-                                </div>
-                                <h3 className={styles.schoolName}>{activeSchool.name}</h3>
-                            </div>
-                            <div className={styles.programsBadge}>Programs Offered</div>
+                    {/* Desktop View */}
+                    <div className={styles.desktopView}>
+                        <div className={styles.schoolsList}>
+                            {schoolsData.map((school) => (
+                                <button
+                                    key={school.id}
+                                    className={`${styles.schoolTab} ${activeSchoolId === school.id ? styles.activeTab : ''}`}
+                                    onClick={() => setActiveSchoolId(school.id)}
+                                >
+                                    {school.name}
+                                </button>
+                            ))}
                         </div>
 
-                        <div className={styles.programsList}>
-                            {activeSchool.programs.map((program, index) => (
-                                <div key={index} className={styles.programItem}>
-                                    <div className={styles.programName}>{program.name}</div>
-                                    <div className={styles.programInfo}>
-                                        <div className={styles.duration}>Duration : {program.duration}</div>
-                                        <a href="#" className={styles.applyLink}>
-                                            Apply Now <span className={styles.arrowIcon}>↗</span>
-                                        </a>
+                        <div className={styles.schoolDetails}>
+                            <SchoolDetailsContent school={activeSchool} />
+                        </div>
+                    </div>
+
+                    {/* Mobile Accordion View */}
+                    <div className={styles.mobileView}>
+                        <div className={styles.accordionContainer}>
+                            {schoolsData.map((school) => (
+                                <div key={school.id} className={styles.accordionItem}>
+                                    <button
+                                        className={`${styles.schoolTab} ${activeSchoolId === school.id ? styles.activeTab : ''} ${styles.accordionHeader}`}
+                                        onClick={() => setActiveSchoolId(activeSchoolId === school.id ? null : school.id)}
+                                    >
+                                        <span className={styles.accordionTitle}>{school.name}</span>
+                                        <span className={styles.accordionIcon}>{activeSchoolId === school.id ? '−' : '+'}</span>
+                                    </button>
+                                    
+                                    <div className={`${styles.accordionContent} ${activeSchoolId === school.id ? styles.activeContent : ''}`}>
+                                        <div className={styles.accordionContentInner}>
+                                            <div className={styles.schoolDetailsMobile}>
+                                                <SchoolDetailsContent school={school} />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             ))}

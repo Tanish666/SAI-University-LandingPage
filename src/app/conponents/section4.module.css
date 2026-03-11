@@ -16,32 +16,52 @@
 }
 
 .header h2 {
-    font-size: 42px;
-    font-weight: 600;
     color: #000;
-    margin-bottom: 15px;
+    font-family: "Roboto Flex";
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 55px;
+    /* 122.222% */
 }
 
 .header p {
-    font-size: 18px;
-    color: #666;
+    color: #595959;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 55px;
+    /* 343.75% */
 }
 
 .contentWrapper {
-    display: flex;
-    gap: 20px;
+    width: 100%;
     min-height: 500px;
 }
 
+.desktopView {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mobileView {
+    display: none;
+    width: 100%;
+}
+
 .schoolsList {
-    flex: 0 0 320px;
+    flex: 0 0 436px;
+    width: 436px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .schoolTab {
-    padding: 20px 30px;
+    width: 436px;
+    height: 55px;
+    padding: 0 30px;
     background-color: #e0e0e0;
     border: none;
     display: flex;
@@ -49,7 +69,6 @@
     justify-content: flex-start;
     text-align: left;
     white-space: nowrap;
-    flex: 1;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -63,12 +82,35 @@
 }
 
 .schoolDetails {
-    flex: 1;
+    width: 650px;
+    height: 496px;
     background-color: #f1f2f4;
     padding: 40px 40px 30px 40px;
     position: relative;
     border: 1px solid #e0e0e0;
-    min-height: 620px;
+    overflow-y: auto;
+    /* Custom Scrollbar Styles for Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #004ea2 transparent;
+}
+
+/* Custom Webkit Scrollbar */
+.schoolDetails::-webkit-scrollbar {
+    width: 6px;
+}
+
+.schoolDetails::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+}
+
+.schoolDetails::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 4px;
+}
+
+.schoolDetails::-webkit-scrollbar-thumb:hover {
+    background: #004ea2;
 }
 
 .detailsHeader {
@@ -174,25 +216,65 @@
 }
 
 @media (max-width: 992px) {
-    .contentWrapper {
-        flex-direction: column;
+    .desktopView {
+        display: none;
     }
 
-    .schoolsList {
-        flex: 1;
-        flex-direction: row;
-        flex-wrap: wrap;
+    .mobileView {
+        display: block;
+    }
+
+    .accordionContainer {
+        display: flex;
+        flex-direction: column;
         gap: 8px;
-        justify-content: center;
+    }
+
+    .accordionItem {
+        width: 100%;
+    }
+
+    .accordionHeader {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .accordionIcon {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1;
+    }
+
+    .accordionContent {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.3s ease-in-out;
+    }
+
+    .accordionContentInner {
+        overflow: hidden;
+    }
+
+    .activeContent {
+        grid-template-rows: 1fr;
+    }
+
+    .schoolDetailsMobile {
+        background-color: #f1f2f4;
+        padding: 40px;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        width: 100%;
     }
 
     .schoolTab {
-        padding: 14px 16px;
-        font-size: 14px;
-    }
-
-    .schoolDetails {
-        padding: 40px;
+        width: 100%;
+        height: auto;
+        padding: 18px 20px;
+        font-size: 16px;
     }
 
     .detailsHeader {
@@ -243,7 +325,8 @@
         font-size: 13px;
     }
 
-    .schoolDetails {
+    .schoolDetails,
+    .schoolDetailsMobile {
         padding: 20px 15px;
     }
 
