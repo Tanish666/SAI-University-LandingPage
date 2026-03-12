@@ -3,7 +3,19 @@ import styles from './section6.module.css'
 
 const Section6 = () => {
     // Array for logo placeholders
-    const logos = ['/S6Logo1.svg', '/S6Logo2.svg', '/S6Logo3.svg', '/S6Logo4.svg', '/S6Logo5.svg', '/S6Logo6.svg', '/S6Logo7.svg',];
+    const logos = [
+        '/logos/4I.jpg', '/logos/CEGLogo.png', '/logos/Codoid-Logo.svg', '/logos/DavaraLogo.png',
+        '/logos/ELogo.jpg', '/logos/IMMERSOAiLogo.png', '/logos/SKSLogo.webp', '/logos/SenecaGlobalLogo.svg',
+        '/logos/altrosynLogo.svg', '/logos/amvionLogo.svg', '/logos/annaUni.png', '/logos/britania.png',
+        '/logos/cadence.png', '/logos/casagrandLogo.png', '/logos/changepondLogo.png', '/logos/dotsLogo.jpg',
+        '/logos/erosLogo.webp', '/logos/flexLogo.svg', '/logos/flsLogo.png', '/logos/hivemindLogo.svg',
+        '/logos/horseLogo.jpg', '/logos/htcLogo.png', '/logos/inspireAILogo.png', '/logos/jiostarLogo.png',
+        '/logos/mercedez-benz.png', '/logos/netoLogo.png', '/logos/nexhsLogo.png', '/logos/pathfinderLogo.png',
+        '/logos/pojoLogo.jpg', '/logos/proatLogo.png', '/logos/prodaptLogo.svg', '/logos/ramcoLogo.jpg',
+        '/logos/roombrLogo.avif', '/logos/scieraLogo.png', '/logos/scripboxLogo.png', '/logos/seaportaiLogo.jpg',
+        '/logos/seimensLogo.png', '/logos/techMahindraLogo.png', '/logos/tokieLogo.png', '/logos/trinityLogo.png',
+        '/logos/virtusaLogo.webp', '/logos/zoho.png'
+    ];
     return (
         <section className={styles.section6}>
             <div className={styles.container}>

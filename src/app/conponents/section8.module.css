@@ -332,28 +332,58 @@
 
     .banner {
         flex-direction: column;
-        padding: 30px 24px;
+        padding: 40px 24px 0;
         text-align: center;
         margin-top: 60px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .bannerContent {
+        margin-bottom: 20px;
     }
 
     .bannerTitle {
-        font-size: 24px;
+        font-size: 26px;
+        white-space: normal;
+        margin-bottom: 15px;
+        line-height: 1.3;
     }
 
     .bannerSubtitle {
         margin: 0 auto 20px;
         font-size: 14px;
-        max-width: 100%;
+        line-height: 1.5;
+        max-width: 90%;
     }
 
     .bannerImageWrapper {
-        display: none;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .bannerImage {
+        position: relative;
+        height: 280px;
+        right: auto;
+        bottom: -5px;
+    }
+
+    .graphicOverlay {
+        width: 240px;
+        height: 240px;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
     }
 
     .ctaButton {
         font-size: 14px;
-        padding: 10px 20px;
+        padding: 12px 24px;
     }
 
     .speaksTitle,
@@ -414,7 +444,7 @@
     }
 
     .banner {
-        padding: 40px 20px;
+        padding: 40px 20px 0;
         margin-top: 50px;
         border-radius: 12px;
         margin-left: 10px;

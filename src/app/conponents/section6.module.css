@@ -110,7 +110,7 @@
     margin-bottom: 10px;
     white-space: nowrap;
     width: max-content;
-    animation: marquee 40s linear infinite;
+    animation: marquee 200s linear infinite;
 }
 
 @keyframes marquee {
@@ -129,7 +129,7 @@
     margin-bottom: 10px;
     white-space: nowrap;
     width: max-content;
-    animation: marqueeReverse 40s linear infinite;
+    animation: marqueeReverse 200s linear infinite;
 }
 
 @keyframes marqueeReverse {
@@ -153,9 +153,11 @@
 }
 
 .logoImage {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .logoPlaceholder {
